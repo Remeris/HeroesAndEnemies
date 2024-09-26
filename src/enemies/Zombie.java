@@ -1,7 +1,6 @@
 package enemies;
 
 import heroes.Hero;
-import utils.Stats;
 
 import static utils.Stats.DEFAULT_ARMOR;
 

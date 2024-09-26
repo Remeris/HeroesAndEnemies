@@ -10,7 +10,7 @@ public abstract class Enemy implements Mortal{
     protected int hp;
     private int damage;
     private int armor;
-    private String name;
+    private final String name;
     private boolean ressurection = true;
 
     public Enemy(int hp,String name) {

@@ -3,7 +3,6 @@ package heroes;
 import enemies.Enemy;
 import utils.Stats;
 
-import static utils.Stats.DEFAULT_ARMOR;
 import static utils.Stats.DEFAULT_CRIT_DAMAGE_MOD;
 
 public class Archer extends Hero{
