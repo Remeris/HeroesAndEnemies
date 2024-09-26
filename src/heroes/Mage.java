@@ -23,6 +23,8 @@ public class Mage extends Hero{
         setMana(BASE_MANA_STAT);
     }
 
+    //базовая атака мага посохом
+    //проверяет жив ли маг и его цель, после чего наносит атаку в зависимости расчета шанса критического удара
     @Override
     public void attackEnemy(Enemy enemy) {
         if (isAlive() && enemy.isAlive()){
@@ -36,12 +38,16 @@ public class Mage extends Hero{
         }
     }
 
+    //метод устанавливающий значение маны мага
     public void setMana(int mana) {
         this.mana = mana;
     }
 
+    //второй атакующий навык мага
+    //создает огненный шар и наносит урон расходуя ману
+    //маг обладает повышенным уроном от заклинаний в случае критической атаки
     public void fireball(Enemy enemy){
-        if (isAlive()){
+        if (isAlive() && enemy.isAlive()){
             if (mana >= 30){
                 mana = mana - 30;
                 if ((setCrit()) >= 8) {

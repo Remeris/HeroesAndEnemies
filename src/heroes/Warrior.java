@@ -35,6 +35,8 @@ public class Warrior extends Hero{
         }
     }
 
+    //второй навык атаки воина
+    //совершает две атаки за один раз
     public void doubleAttack(Enemy enemy) {
         if (isAlive() && enemy.isAlive()) {
             System.out.println(getName() + " Совершает две атаки: ");

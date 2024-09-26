@@ -16,7 +16,7 @@ public class Vampire extends Enemy {
         setArmor(DEFAULT_ARMOR);
         setDamage(DEFAULT_VAMPIRE_DAMAGE);
     }
-
+    //базовая атака вампира, прибавляет фиксированное количество здоровья за атаку
     @Override
     public void attackEnemy(Hero hero) {
         if (isAlive() && hero.isAlive()) {

@@ -16,6 +16,9 @@ public class Archer extends Hero{
         setArmor(Stats.DEFAULT_ARMOR);
     }
 
+    //персонаж лучник совершает базовую атаку
+    //перед атакой проверяет жив ли лучник и жив ли противник
+    // лучник имеет бонусный модификатор на шанс критичской атаки, так же лучник имеет повышенный шанс критической атаки как таковой
     @Override
     public void attackEnemy(Enemy enemy) {
         if (isAlive() && enemy.isAlive()){

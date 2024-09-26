@@ -3,15 +3,12 @@ package enemies;
 import heroes.Hero;
 import utils.Mortal;
 
-import static utils.Stats.DEFAULT_HP;
-
-
 public abstract class Enemy implements Mortal{
     protected int hp;
     private int damage;
     private int armor;
     private final String name;
-    private boolean ressurection = true;
+
 
     public Enemy(int hp,String name) {
         this.hp = hp;
@@ -20,22 +17,13 @@ public abstract class Enemy implements Mortal{
 
     public abstract void attackEnemy(Hero hero);
 
-
+    //базовый метод получения урона
+    //проверяет жив ли персонаж, после получает урон сниженный на показатель брони
     public void takeDamage(int damage) {
         if (isAlive()) {
             int realDamage = damage - getArmor();
             this.hp -= realDamage;
             System.out.println(getName() + " получает " + realDamage + " урона");
-        }
-        if (!isAlive()){
-            if (ressurection) {
-                ressurection = false;
-                hp = DEFAULT_HP;
-                System.out.println(getName() + " воскрес" );
-            }else{
-                System.out.println(getName() + " убит");
-            }
-
         }
     }
 
