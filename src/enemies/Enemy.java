@@ -3,9 +3,6 @@ package enemies;
 import heroes.Hero;
 import utils.Mortal;
 
-import static utils.Stats.DEFAULT_HP;
-
-
 public abstract class Enemy implements Mortal{
     protected int hp;
     private int damage;
