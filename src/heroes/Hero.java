@@ -19,8 +19,9 @@ public abstract class Hero {
 
     public abstract void attackEnemy(Enemy enemy);
 
+    //базовый метод получения урона героев
+    //урон рассчитывается с учетом брони персонажей
     public void takeDamage(int damage){
-
         if (isAlive()) {
             int realDamage = damage - getArmor();
             this.hp -=realDamage;
